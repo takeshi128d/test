@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>簡単な格闘ゲームデザイン</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .game-container {
+            width: 800px;
+            height: 450px;
+            background: url('background.jpg') no-repeat center center;
+            background-size: cover;
+            position: relative;
+            border: 2px solid #fff;
+        }
+        .character {
+            position: absolute;
+            bottom: 50px;
+            width: 100px;
+            height: 150px;
+            background: url('character.png') no-repeat center center;
+            background-size: contain;
+        }
+        .player1 {
+            left: 100px;
+        }
+        .player2 {
+            right: 100px;
+        }
+        .health-bar {
+            position: absolute;
+            top: 20px;
+            width: 200px;
+            height: 20px;
+            background-color: red;
+            border: 2px solid #fff;
+        }
+        .player1-health {
+            left: 20px;
+        }
+        .player2-health {
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="health-bar player1-health"></div>
+        <div class="health-bar player2-health"></div>
+        <div class="character player1"></div>
+        <div class="character player2"></div>
+    </div>
+</body>
+</html>
